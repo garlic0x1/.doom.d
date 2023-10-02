@@ -29,8 +29,23 @@
 (map! :mode alchemist-eval-mode
       :desc "close eval popup" :nvg "q" #'alchemist-eval-close-popup)
 
-;; copied from https://codeberg.org/flowfx/doom.d
-(define-key evil-motion-state-map (kbd "C-h") #'evil-window-left)
-(define-key evil-motion-state-map (kbd "C-j") #'evil-window-down)
-(define-key evil-motion-state-map (kbd "C-k") #'evil-window-up)
-(define-key evil-motion-state-map (kbd "C-l") #'evil-window-right)
+
+(define-minor-mode foo-mode
+  "Get your foos in the right places."
+  :lighter " foo"
+  :keymap (let ((map (make-sparse-keymap)))
+            (define-key map (kbd "C-c f") 'insert-foo)
+            map)
+  (make-local-variable 'foo-count))
+
+(define-minor-mode evil-nav
+  "Minor mode for my personal keybindings."
+  :global t :keymap (make-sparse-keymap))
+
+(map! :mode evil-nav
+      :nvg "C-h" #'windmove-left
+      :nvg "C-j" #'windmove-down
+      :nvg "C-k" #'windmove-up
+      :nvg "C-l" #'windmove-right)
+
+(evil-nav)

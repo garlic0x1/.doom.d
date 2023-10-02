@@ -61,3 +61,4 @@
 (package! alchemist)
 (package! company-elixir
   :recipe (:host github :repo "ayrat555/company-elixir"))
+(package! minions)
