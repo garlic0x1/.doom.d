@@ -1,7 +1,7 @@
 ;;; elixir.el -*- lexical-binding: t; -*-
 
-;; Elixir configuration
-;; Start by configuring Alchemist for some tasks.
+;; Elixir REPL setup
+;; Some keybindings are made in ./keybindings.el
 (use-package! alchemist
   :hook (elixir-mode . alchemist-mode)
   :config
@@ -14,6 +14,9 @@
   (setq alchemist-hooks-compile-on-save t)
   (map! :map elixir-mode-map :nv "SPC m" alchemist-mode-keymap))
 
+;; Configure lexical LSP
+;; Make sure your Elixir version isn't old
+;; (pacman package is outdated)
 (use-package! lsp-mode
   :no-require t
   :commands lsp
@@ -29,12 +32,4 @@
       :major-modes '(elixir-mode)
       :activation-fn (lsp-activate-on "elixir")
       :server-id 'elixir-lexical
-      :priority 0))
-    ))
-
-;; Enable format and iex reload on save (broken)
-;; (after! lsp
-;;   (add-hook 'elixir-mode-hook
-;;             (lambda ()
-;;               (add-hook 'before-save-hook 'elixir-format nil t)
-;;               (add-hook 'after-save-hook 'alchemist-iex-reload-module))))
+      :priority 0))))
