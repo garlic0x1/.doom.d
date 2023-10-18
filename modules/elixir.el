@@ -12,7 +12,8 @@
   (set-repl-handler! 'elixir-mode #'alchemist-iex-project-run)
   (setq alchemist-mix-env "dev")
   (setq alchemist-hooks-compile-on-save t)
-  (map! :map elixir-mode-map :nv "SPC m" alchemist-mode-keymap))
+  ;; (map! :map elixir-mode-map :nv "SPC m" alchemist-mode-keymap)
+  )
 
 ;; Configure lexical LSP
 ;; Make sure your Elixir version isn't old
