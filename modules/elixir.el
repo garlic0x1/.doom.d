@@ -3,7 +3,7 @@
 ;; Elixir REPL setup
 ;; Some keybindings are made in ./keybindings.el
 (use-package! alchemist
-  :hook (elixir-mode . alchemist-mode)
+  ;; :hook (elixir-mode . alchemist-mode)
   :config
   (set-lookup-handlers! 'elixir-mode
     :definition #'alchemist-goto-definition-at-point
