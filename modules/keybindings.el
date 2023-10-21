@@ -1,16 +1,20 @@
 ;;; keybindings.el -*- lexical-binding: t; -*-
 
-(map! :mode alchemist-mode
-      :desc "easy close eval popup" :n "q" #'alchemist-eval-close-popup
-      :leader (:prefix ("m" . "alchemist")
-               :desc "start project repl" "'" #'alchemist-iex-project-run
-               :desc "start inferior repl" "\"" #'alchemist-iex-run
-               :desc "compile buffer" "k" #'alchemist-iex-compile-this-buffer
-               :desc "eval buffer" "E" #'alchemist-iex-compile-this-buffer
-               :desc "eval region" "e" #'alchemist-eval-region
-               :desc "send region" "s" #'alchemist-iex-send-region
-               :desc "mix test" "t" #'alchemist-mix-test
-               :desc "elixir format" "f" #'elixir-format))
+(map!
+ ;; :mode alchemist-mode
+ :after alchemist-mode-hook
+ ;; :map alchemist-mode-keymap
+ :map garlic-keymap
+ :desc "easy close eval popup" :n "q" #'alchemist-eval-close-popup
+ :leader (:prefix ("m" . "alchemist")
+          :desc "start project repl" "'" #'alchemist-iex-project-run
+          :desc "start inferior repl" "\"" #'alchemist-iex-run
+          :desc "compile buffer" "k" #'alchemist-iex-compile-this-buffer
+          :desc "eval buffer" "E" #'alchemist-iex-compile-this-buffer
+          :desc "eval region" "e" #'alchemist-eval-region
+          :desc "send region" "s" #'alchemist-iex-send-region
+          :desc "mix test" "t" #'alchemist-mix-test
+          :desc "elixir format" "f" #'elixir-format))
 
 
 (defvar garlic-keymap (make-sparse-keymap))
@@ -26,8 +30,9 @@
                :desc "random theme"       "f" #'random-theme)
       :leader (:prefix ("l" . "various repls")
                :desc "common lisp" "l" #'sly
+               :desc "LFE"         "f" #'inferior-lfe
                :desc "scheme"      "s" #'geiser
-               :desc "emacs"       "e" #'ielm
+               :desc "emacs"       "m" #'ielm
                :desc "python"      "p" #'run-python
                :desc "javascript"  "j" #'nodejs-repl
                :desc "elixir"      "e" #'alchemist-iex-run))
