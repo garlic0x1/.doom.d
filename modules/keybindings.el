@@ -30,6 +30,7 @@
                :desc "random theme"       "f" #'random-theme)
       :leader (:prefix ("l" . "various repls")
                :desc "common lisp" "l" #'sly
+               :desc "vterm"       "v" #'vterm
                :desc "LFE"         "f" #'inferior-lfe
                :desc "scheme"      "s" #'geiser
                :desc "emacs"       "m" #'ielm

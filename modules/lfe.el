@@ -13,6 +13,8 @@
    '(lfe-mode . ("lfe-ls"
                  "--transport" "tcp" "--port" :autoport))))
 
+;; (add-hook lfe-mode-hook (lambda () (eglot)))
+
 ;; idk how to make it use stdio
 ;; (defgroup lfe-ls nil "LSP group for LFE" :group 'lsp-mode)
 
