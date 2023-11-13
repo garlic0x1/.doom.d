@@ -25,3 +25,6 @@ last item in second form, etc."
                     `(,@form ,x)
                   (list form x)))
    (:else `(->> (->> ,x ,form) ,@more))))
+
+(defun config-path (path)
+  (concat doom-user-dir path))

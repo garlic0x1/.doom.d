@@ -1,9 +1,9 @@
 ;;; lfe-custom.el -*- lexical-binding: t; -*-
 
 ;; from the LFE git repo, with modifications for lfe-ls
-(defvar lfe-module "~/.doom.d/modules/lfe")
+(defvar lfe-module (config-path "modules/lfe"))
 (add-to-list 'load-path lfe-module)
-(load-modules "~/.doom.d/modules/lfe")
+(load-modules lfe-module)
 
 ;;; set up completion
 ;; eglot

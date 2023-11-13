@@ -34,6 +34,7 @@
                :desc "LFE"         "f" #'inferior-lfe
                :desc "scheme"      "s" #'geiser
                :desc "emacs"       "m" #'ielm
+               :desc "clojure"     "c" #'cider-jack-in-clj
                :desc "python"      "p" #'run-python
                :desc "javascript"  "j" #'nodejs-repl
                :desc "elixir"      "e" #'alchemist-iex-run))

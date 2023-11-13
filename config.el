@@ -9,4 +9,4 @@
        (mapcar #'load)))
 
 ;; load everything from ./modules
-(load-modules "~/.doom.d/modules")
+(load-modules (config-path "modules"))
