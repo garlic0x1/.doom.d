@@ -1,7 +1,11 @@
 ;;; $DOOMDIR/config.el -*- lexical-binding: t; -*-
 
+;; help load config files
+(defun config-path (path)
+  (concat doom-user-dir path))
+
 ;; get threading macros
-(load "~/.doom.d/lang.el")
+(load (config-path "lang.el"))
 
 (defun load-modules (directory)
   (->> (directory-files directory t)

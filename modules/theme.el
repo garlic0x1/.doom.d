@@ -4,15 +4,11 @@
 
 (let ((start-theme 'modus-vivendi)
       (known-themes '(doom-rouge
+                      doom-sourcerer
                       doom-palenight
-                      doom-monokai-spectrum
                       doom-1337
                       doom-snazzy
                       modus-vivendi
-                      deeper-blue
-                      tango-dark
-                      wombat
-                      tsdh-dark
                       wheatgrass))
       (light-themes '(doom-flatwhite
                       doom-opera-light

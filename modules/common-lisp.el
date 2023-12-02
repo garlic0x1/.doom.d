@@ -4,4 +4,6 @@
 (load "/home/garlic/quicklisp/clhs-use-local.el" t)
 
 ;; use roswell repl
-(setq inferior-lisp-program "ros -Q run")
+(setq inferior-lisp-program
+      (if (shell-command "which ros")
+          "sbcl" "ros -Q run"))
