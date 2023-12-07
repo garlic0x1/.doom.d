@@ -7,6 +7,7 @@
 ;; get threading macros
 (load (config-path "lang.el"))
 
+;; convenience function for loading dirs
 (defun load-modules (directory)
   (->> (directory-files directory t)
        (cl-remove-if #'file-directory-p)

@@ -58,7 +58,6 @@
 ;;           :recipe (:host github :repo "magit/with-editor"))
 
 ;; (package! inf-elixir)
-(package! alchemist)
-(package! company-elixir
-  :recipe (:host github :repo "ayrat555/company-elixir"))
-(package! minions)
+;; (package! company-elixir
+;;   :recipe (:host github :repo "ayrat555/company-elixir"))
+;; (package! minions)
