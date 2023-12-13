@@ -31,7 +31,7 @@
   (with-output-to-temp-buffer "*ollama*"
     (princ "Prompt:\n")
     (princ prompt)
-    (princ "\n-----------------------------------------------------------\nResponse:\n")
+    (princ "\n---------------------------------------------------------------------\nResponse:\n")
     (princ response)))
 
 (defun ollama-fetch (prompt)
@@ -48,6 +48,7 @@
          (ollama-response-handler prompt (ollama-read-resp data)))))))
 
 (defun current-region ()
+  "Convenience function to get the selected text."
   (buffer-substring
    (region-beginning)
    (region-end)))
