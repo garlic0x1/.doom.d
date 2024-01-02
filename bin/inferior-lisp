@@ -1,0 +1,15 @@
+#!/usr/bin/bash
+
+start=$(pwd)
+
+while [ ! -f "$(pwd)/qlfile" ] && [ "$(pwd)" != "/" ]; do
+  cd ..
+done
+
+if [ "$(pwd)" == "/" ]; then
+  cd $start
+  sbcl
+else
+  qlot exec sbcl
+  cd $start
+fi

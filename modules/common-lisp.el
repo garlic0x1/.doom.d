@@ -3,7 +3,6 @@
 ;; cl hyperspec helper
 (load "/home/garlic/quicklisp/clhs-use-local.el" t)
 
-;; use sbcl or roswell repl
-(setq inferior-lisp-program
-      (if (shell-command "which ros")
-          "sbcl" "ros -Q run"))
+(setq sly-lisp-implementations
+      `((sbcl (,(concat (config-path "bin/inferior-lisp")))
+         :coding-system utf-8-unix)))
