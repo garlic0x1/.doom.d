@@ -31,7 +31,7 @@
                :desc "LLM selected"       "a" #'ollama-prompt-region
                :desc "prompt LLM"         "a" #'ollama-prompt)
       :leader (:prefix ("l" . "various repls")
-               :desc "common lisp" "l" #'garlic-start-sly
+               :desc "common lisp" "l" #'sly
                :desc "vterm"       "v" #'vterm
                :desc "LFE"         "f" #'inferior-lfe
                :desc "scheme"      "s" #'geiser
