@@ -23,6 +23,8 @@
       :nvg "C-j" #'windmove-down
       :nvg "C-k" #'windmove-up
       :nvg "C-l" #'windmove-right
+      :nvg "C-w d" #'evil-goto-definition
+      :nvg "C-w b" #'pop-global-mark
       :leader (:prefix ("d" . "garlic")
                :desc "toggle transprency" "t" #'toggle-transparency
                :desc "random known theme" "r" #'random-known-theme

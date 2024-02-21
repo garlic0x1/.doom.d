@@ -57,7 +57,7 @@
 ;;           :pin "bbc60f68ac190f02da8a100b6fb67cf1c27c53ab"
 ;;           :recipe (:host github :repo "magit/with-editor"))
 
-;; (package! inf-elixir)
-;; (package! company-elixir
-;;   :recipe (:host github :repo "ayrat555/company-elixir"))
 ;; (package! minions)
+
+(package! apprentice
+  :recipe (:host github :repo "sasanidas/apprentice"))
